@@ -13,15 +13,14 @@ import java.util.Map;
 
 public class Main {
 	public static void main(String[] args) throws IOException, FileNotFoundException {
-		BufferedReader bufferedReader = new BufferedReader(new FileReader("EdgarPoem.txt"));
-
+		BufferedReader bufferedReader = new FileReader("EdgarPoem.txt"));
 		Map<String, Integer> wordCounts = new HashMap<>();
 		String line;
 
 			while ((line = bufferedReader.readLine()) != null) {
 
-				String[] wordsperline = line.split(/\line/);
-				for (String word : wordsperline) {
+				String[] words = line.split("/\s/");
+				for (String word : words) {
 
 				word = word.trim();
 
