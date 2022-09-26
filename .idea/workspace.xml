@@ -13,8 +13,19 @@
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+        <option value="Interface" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -45,7 +56,10 @@
       <option name="presentableId" value="Default" />
       <updated>1663553818157</updated>
       <workItem from="1663553819497" duration="425000" />
-      <workItem from="1663554271975" duration="4773000" />
+      <workItem from="1663554271975" duration="5038000" />
+      <workItem from="1664149103318" duration="5886000" />
+      <workItem from="1664158452770" duration="1515000" />
+      <workItem from="1664160001022" duration="2759000" />
     </task>
     <task id="LOCAL-00001" summary="First Soft Deve Fall 2022 Application">
       <created>1663554371892</created>
@@ -54,7 +68,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663554371892</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="First Soft Deve Fall 2022 Application">
+      <created>1663559134798</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1663559134798</updated>
+    </task>
+    <task id="LOCAL-00003" summary="First Soft Deve Fall 2022 Application">
+      <created>1663559317501</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1663559317501</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

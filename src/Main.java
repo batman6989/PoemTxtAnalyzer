@@ -1,54 +1,23 @@
-import java.io.FileNotFoundException;
-import java.util.HashMap;
-import java.util.LinkedHashMap;
-import java.io.BufferedReader;
-import java.util.Map.Entry;
+import java.nio.charset.StandardCharsets;
+import java.nio.file.Files;
+import java.nio.file.Path;
+import java.nio.file.Paths;
+import java.util.*;
+import java.io.*;
+import java.util.function.Function;
 import java.util.stream.Collectors;
-import java.io.FileReader;
-import java.io.IOException;
-import java.util.Collections;
-import java.util.Map;
 
-
+import static java.util.stream.Collectors.counting;
 
 public class Main {
-	public static void main(String[] args) throws IOException, FileNotFoundException {
-		BufferedReader bufferedReader = new FileReader("EdgarPoem.txt"));
-		Map<String, Integer> wordCounts = new HashMap<>();
-		String line;
+    private static void countWords(final Path file) throws IOException {
+        Arrays.stream(new String(Files.readAllBytes(file), StandardCharsets.UTF_8).split("\\W+"))
+                .collect(Collectors.groupingBy(Function.<String>identity(), TreeMap::new, counting())).entrySet()
+                .forEach(System.out::println);
+    }
+    public static void main(String[] args) throws IOException {
+        Path path = Paths.get("src/EdgarPoem.txt");
+       countWords(path);
+    }
 
-			while ((line = bufferedReader.readLine()) != null) {
-
-				String[] words = line.split("/\s/");
-				for (String word : words) {
-
-				word = word.trim();
-
-				if (word.length() > 0) {
-
-					if (wordCounts.containsKey(word)) {
-						wordCounts.put(word, wordCounts.get(word) + 1);
-					} else {
-						wordCounts.put(word, 1);
-					}
-				}
-			}
-		}
-
-		// sorting wordCounts by frequency
-		Map<String, Integer> sortedWordCounts = wordCounts.entrySet().stream()
-				.sorted(Collections.reverseOrder(Entry.comparingByValue()))
-				.collect(Collectors.toMap(Entry::getKey, Entry::getValue, (e1, e2) -> e1, LinkedHashMap::new));
-
-
-		System.out.printf("Word", "Frequency");
-
-		System.out.printf("====", "=========");
-
-		for (Map.Entry<String, Integer> entry : sortedWordCounts.entrySet()) {
-			System.out.printf( entry.getKey(), entry.getValue());
-		}
-
-		bufferedReader.close();
-	}
 }
